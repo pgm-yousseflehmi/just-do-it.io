@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+header .title img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+header .title {
+  display:flex;
+  align-items:center;
+  color:white;
+}
+
+header a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+header {
+  display:flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #1F2023;
+  border-bottom: 2px solid gray;
+  color: white;
+  align-items:center;
+}
+
+body {
+  background-color: rgb(22,21,24);
+
+}
+
+.loginform {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+
+}
+
+.loginform input {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+}
+
+.loginform button {
+  display: flex;
+  background-color: mediumpurple;
+  border-radius: 20%;
+  padding: 0.4rem;
+  color: white;
+  cursor: pointer
+}
+
+.container {
+  display: flex;
+}
+
+.contentcontainer {
+  width: 100%;
+  height:100vh;
+  background-color: rgb(22,21,24);
+
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #1F2023;
+  color: white;
+  height:100vh;
+
+}
+
+.sidebar .title {
+  padding: 1rem;
+}
+
+.sidebar ul li {
+  list-style-type: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.sidebar .selected {
+  background-color: rgb(38,37,51);
+  color: rgb(75,67,134);
+}
+
+.contentcontainer {
+  margin-left: 4rem;
+}
+
+.addForm {
+  display: flex;
+}
+
+.todoTask {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.todoTask span {
+  color: black;
+  background-color: white;
+  width: 20rem;
+  padding: 0.6rem;
+}
+
+.todoTask button {
+  height:100%;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.contentcontainer h1 {
+  margin-top: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.addForm input {
+  width: 20rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.addForm button {
+  height: 100%;
+  width: 5rem;
+  border: none;
+  background-color: greenyellow;
+  color: white;
+}
