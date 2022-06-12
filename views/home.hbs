@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Just do it</title>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="media/logo.png" alt="">
+            Just do it
+        </div>
+        <a href="/logout"> Logout </a>
+    </header>
+</body>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="title">
+            <h1>Categories</h1>
+        </div>
+        <div class="categories">
+            <ul>
+                <li class="selected">
+                    Default
+                </li>
+                <li>
+                    Household
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="contentcontainer">
+        <h1>We've got things todo</h1>
+        <div class="addForm">
+            <form action="todoPost" method="post">
+                <input name="task" type="text"><select name="category" id="">
+                    <option value="Default">Default</option>
+                    <option value="Household">Household</option>
+                    </select>
+                    <button>+</button>
+            </form>
+        </div>
+              {{#each todoTasks}}
+            <div class="todoTask">
+                <form action="completeTask" method="post">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button>V</button>
+                </form>
+
+                <span>{{this.task}}</span>
+                <form action="deleteTask" method="post">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button>DEL</button>
+                </form>
+                <form action="editPost" method="get">
+                    <button>EDIT</button>
+                </form>
+            </div>
+            {{/each}}
+        <h1>Things you've done! </h1>
+        {{#each doneTasks}}
+            <div class="todoTask">
+
+
+                <span>{{this.task}}</span>
+                <form action="deleteTask" method="post">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button>DEL</button>
+                </form>
+    
+            </div>
+            {{/each}}
+    </div>
+</div>
+</html>
